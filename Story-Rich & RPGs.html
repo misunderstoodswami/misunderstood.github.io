@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Story-Rich & RPGs - Retro Réveil</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .game-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .game-image-container {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .game-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .game-info {
+            padding: 1rem;
+        }
+        
+        .game-info h3 {
+            color: #0ff;
+            margin-top: 0;
+        }
+        
+        .game-info p {
+            color: #fff;
+            font-size: 0.9rem;
+        }
+        
+        .game-media {
+            margin-top: 2rem;
+        }
+        
+        .game-media h3 {
+            color: #0ff;
+            border-bottom: 2px solid #0ff;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .media-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        .media-item {
+            flex: 0 0 300px;
+            height: 180px;
+        }
+        
+        .media-item img, .media-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="gametypes.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    
+    <header>
+        <div class="logo-container">
+            <div class="logo-image">
+                <a href="index.html"><img src="logo-baby.png" alt="Retro Réveil Logo" class="site-logo-img"></a>
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <a href="Game types.html">GAME TYPES</a>
+            <a href="About Us.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        
+        <div class="find-games-button">
+            <a href="Game types.html" class="btn-find-games">FIND YOUR GAMES</a>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-section">
+            <div class="tagline">
+                <h2>Story-Rich & RPGs</h2>
+                <p>Immersive narratives and deep character progression</p>
+            </div>
+        </section>
+        
+        <section class="category-description">
+            <p>Get lost in captivating worlds where your choices matter and characters evolve over time. Story-Rich games and RPGs offer compelling narratives, memorable characters, and opportunities to shape your own adventure through meaningful decisions and progression systems.</p>
+        </section>
+        
+        <section class="games-grid">
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="persona-5.jpg" alt="Persona 5" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Persona 5</h3>
+                    <p>Live a double life as a high school student by day and a phantom thief by night in this stylish JRPG. Form bonds with friends, manage your time wisely, and infiltrate the cognitive palaces of corrupt adults to steal their distorted desires.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="yakuza-like-dragon.jpg" alt="Yakuza: Like a Dragon" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Yakuza: Like a Dragon</h3>
+                    <p>Follow Ichiban Kasuga's journey from rock bottom to redemption in this turn-based RPG set in the vibrant criminal underworld of Japan. With its eccentric cast of characters, emotional storytelling, and quirky side activities, this entry reinvents the Yakuza series.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="psychonauts-2.jpg" alt="Psychonauts 2" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Psychonauts 2</h3>
+                    <p>Delve into the minds of colorful characters as psychic agent Raz in this imaginative adventure. Each mind is a unique level filled with clever platforming challenges, visual metaphors, and thoughtful explorations of mental health issues.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="undertale.jpg" alt="Undertale" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Undertale</h3>
+                    <p>A subversive RPG where you don't have to kill anyone. Your choices matter deeply in this indie gem that deconstructs video game tropes while delivering a heartfelt story, memorable characters, and a phenomenal soundtrack.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="deltarune.jpg" alt="Deltarune" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Deltarune</h3>
+                    <p>From the creator of Undertale comes this episodic RPG where you control a team of heroes in a world where choices might not matter as much as you think. Explore the Dark World alongside Kris, Susie, and Ralsei in this mysterious adventure.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="stardew-valley.jpg" alt="Stardew Valley" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Stardew Valley</h3>
+                    <p>Escape the hustle of city life to inherit your grandfather's farm in this beloved farming sim. Build relationships with the townsfolk, discover the valley's secrets, and create your ideal life while experiencing the changing seasons.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="animal-crossing.jpg" alt="Animal Crossing: New Horizons" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Animal Crossing: New Horizons</h3>
+                    <p>Create your own paradise on a deserted island in this relaxing life simulator. Customize your home and island, build a community of animal villagers, and enjoy activities that change with real-world seasons and time.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="earthbound.jpg" alt="Earthbound" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Earthbound</h3>
+                    <p>A quirky RPG classic that takes place in a satirical version of modern America. Join Ness and his friends as they battle bizarre enemies with baseball bats and psychic powers in this influential game known for its unique humor and emotional depth.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="super-mario-2.jpg" alt="Super Mario 2" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Super Mario 2</h3>
+                    <p>The eccentric adventure that broke the Mario formula, taking place in the dream world of Subcon. Choose between four playable characters with unique abilities as you pull vegetables from the ground and throw them at enemies in this bizarre dream quest.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="mario-galaxy.jpg" alt="Mario Galaxy" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Mario Galaxy</h3>
+                    <p>Travel across the cosmos in this revolutionary 3D platformer. Navigate unique planetoids with their own gravity mechanics, collect Power Stars, and discover the touching story of Rosalina and the Lumas in one of Mario's greatest adventures.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="pikmin-4.jpg" alt="Pikmin 4" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Pikmin 4</h3>
+                    <p>Command adorable plant-like creatures to overcome obstacles and rescue stranded castaways on a mysterious planet. With the help of your canine companion Oatchi, discover the planet's secrets in this charming strategy adventure.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="game-media">
+            <h3>Videos & Images</h3>
+            <div class="media-container">
+                <div class="media-item">
+                    <img src="persona-5-gameplay.jpg" alt="Persona 5 Gameplay">
+                </div>
+                <div class="media-item">
+                    <img src="undertale-screenshot.jpg" alt="Undertale Screenshot">
+                </div>
+                <div class="media-item">
+                    <img src="stardew-valley-screenshot.jpg" alt="Stardew Valley Screenshot">
+                </div>
+                <div class="media-item">
+                    <img src="psychonauts-2-gameplay.jpg" alt="Psychonauts 2 Gameplay">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="Game types.html" class="btn-find-game">BACK TO GAME TYPES</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Retro Réveil - Wake up and play real games</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('background-video');
+            
+            video.play().catch(function(error) {
+                console.log("Autoplay prevented: ", error);
+                
+                if (error.name === "NotAllowedError") {
+                    var playButton = document.createElement('button');
+                    playButton.textContent = "Play Video Background";
+                    playButton.className = "video-play-button";
+                    playButton.onclick = function() {
+                        video.play();
+                        this.remove();
+                    };
+                    document.body.appendChild(playButton);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

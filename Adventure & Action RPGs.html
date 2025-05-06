@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adventure & Action RPGs - Retro Réveil</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Page-specific styles */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .game-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .game-image-container {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .game-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .game-info {
+            padding: 1rem;
+        }
+        
+        .game-info h3 {
+            color: #0ff;
+            margin-top: 0;
+        }
+        
+        .game-info p {
+            color: #fff;
+            font-size: 0.9rem;
+        }
+        
+        .game-media {
+            margin-top: 2rem;
+        }
+        
+        .game-media h3 {
+            color: #0ff;
+            border-bottom: 2px solid #0ff;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .media-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        .media-item {
+            flex: 0 0 300px;
+            height: 180px;
+        }
+        
+        .media-item img, .media-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="gametypes.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    
+    <header>
+        <div class="logo-container">
+            <div class="logo-image">
+                <a href="index.html"><img src="logo-baby.png" alt="Retro Réveil Logo" class="site-logo-img"></a>
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <a href="Game types.html">GAME TYPES</a>
+            <a href="About Us.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        
+        <div class="find-games-button">
+            <a href="Game types.html" class="btn-find-games">FIND YOUR GAMES</a>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-section">
+            <div class="tagline">
+                <h2>Adventure & Action RPGs</h2>
+                <p>Epic worlds to explore and enemies to conquer</p>
+            </div>
+        </section>
+        
+        <section class="category-description">
+            <p>Immerse yourself in vast worlds filled with adventure, action, and storytelling. Adventure & Action RPGs offer rich narratives combined with exciting combat mechanics, allowing you to become the hero of your own epic journey.</p>
+        </section>
+        
+        <section class="games-grid">
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="god-of-war.jpg" alt="God of War" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>God of War</h3>
+                    <p>Join Kratos and his son Atreus on an epic journey through Norse mythology. With its stunning visuals, intense combat, and emotional storytelling, God of War redefines the action-adventure genre.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="god-of-war-ragnarok.jpg" alt="God of War Ragnarok" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>God of War Ragnarok</h3>
+                    <p>The sequel to the acclaimed God of War (2018) continues the journey of Kratos and Atreus as they face the impending Ragnarok. Explore the nine realms and face new threats in this breathtaking adventure.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="elden-ring.jpg" alt="Elden Ring" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Elden Ring</h3>
+                    <p>From the creators of Dark Souls comes an epic open-world adventure. Explore the Lands Between, fight fearsome enemies, and uncover the mysteries of the Elden Ring in this challenging action RPG.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="zelda-botw.jpg" alt="The Legend of Zelda: Breath of the Wild" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>The Legend of Zelda: Breath of the Wild</h3>
+                    <p>Embark on a journey across the vast land of Hyrule in this revolutionary open-world adventure. Climb mountains, glide through the skies, and solve puzzles in this masterpiece of game design.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="zelda-totk.jpg" alt="The Legend of Zelda: Tears of the Kingdom" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>The Legend of Zelda: Tears of the Kingdom</h3>
+                    <p>The sequel to Breath of the Wild takes Link to the skies above Hyrule. With new abilities like Ultrahand and Fuse, players can create unique solutions to puzzles and challenges.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="dragon-quest-xi.jpg" alt="Dragon Quest XI" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Dragon Quest XI</h3>
+                    <p>A classic JRPG experience with modern visuals. Follow the Luminary on his quest to save the world of Erdrea from a powerful evil in this charming and engaging adventure.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="zelda-links-awakening.jpg" alt="The Legend of Zelda: Link's Awakening" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>The Legend of Zelda: Link's Awakening</h3>
+                    <p>A beautiful remake of the Game Boy classic. Help Link escape the mysterious Koholint Island in this charming adventure with a unique toy-like visual style.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="metroid-prime-remastered.jpg" alt="Metroid Prime Remastered" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Metroid Prime Remastered</h3>
+                    <p>The classic first-person adventure returns with enhanced visuals. Explore the alien world of Tallon IV as bounty hunter Samus Aran in this atmospheric sci-fi adventure.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="alan-wake-2.jpg" alt="Alan Wake 2" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Alan Wake 2</h3>
+                    <p>Dive into this psychological horror action-adventure that blends cinematic storytelling with intense gameplay. Follow dual protagonists in a mind-bending narrative about creative nightmares come to life.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="tunic.jpg" alt="Tunic" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Tunic</h3>
+                    <p>Play as a small fox on a big adventure in this isometric action game inspired by classic Zelda titles. Discover hidden paths, collect pages of an in-game manual, and uncover ancient secrets.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="game-media">
+            <h3>Videos & Images</h3>
+            <div class="media-container">
+                <div class="media-item">
+                    <img src="elden-ring-gameplay.jpg" alt="Elden Ring Gameplay">
+                </div>
+                <div class="media-item">
+                    <img src="god-of-war-screenshot.jpg" alt="God of War Screenshot">
+                </div>
+                <div class="media-item">
+                    <img src="zelda-botw-screenshot.jpg" alt="Breath of the Wild Screenshot">
+                </div>
+                <div class="media-item">
+                    <img src="tunic-gameplay.jpg" alt="Tunic Gameplay">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="Game types.html" class="btn-find-game">BACK TO GAME TYPES</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Retro Réveil - Wake up and play real games</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('background-video');
+            
+            video.play().catch(function(error) {
+                console.log("Autoplay prevented: ", error);
+                
+                if (error.name === "NotAllowedError") {
+                    var playButton = document.createElement('button');
+                    playButton.textContent = "Play Video Background";
+                    playButton.className = "video-play-button";
+                    playButton.onclick = function() {
+                        video.play();
+                        this.remove();
+                    };
+                    document.body.appendChild(playButton);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

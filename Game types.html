@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Types - Retro Réveil</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="gametypes.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    
+    <header>
+        <div class="logo-container">
+            <div class="logo-image">
+                <a href="index.html"><img src="logo-baby.png" alt="Retro Réveil Logo" class="site-logo-img"></a>
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <a href="Game types.html">GAME TYPES</a>
+            <a href="About Us.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        
+        <div class="find-games-button">
+            <a href="Game types.html" class="btn-find-games">FIND YOUR GAMES</a>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-section">
+            <div class="tagline">
+                <h2>Game types <em>for all players</em></h2>
+            </div>
+        </section>
+        
+        <!-- Updated Game Type Sections with proper links -->
+        <section class="game-type-section">
+            <div class="game-type-container">
+                <div class="game-type-info">
+                    <h2>Adventure & Action RPGs</h2>
+                    <a href="Adventure & Action RPGs.html" class="game-type-link">Explore Adventure & Action RPGs</a>
+                    <p class="game-type-desc">Epic worlds to explore and enemies to conquer in games like God of War, Elden Ring, The Legend of Zelda series, Dragon Quest XI, Tunic, Metroid Prime Remastered, and Alan Wake 2.</p>
+                </div>
+                <div class="game-type-image">
+                    <img src="action.jpg" alt="Adventure & Action RPGs" class="game-image">
+                </div>
+            </div>
+        </section>
+        
+        <section class="game-type-section">
+            <div class="game-type-container">
+                <div class="game-type-info">
+                    <h2>Platformers & Metroidvanias</h2>
+                    <a href="Platformers & Metroidvanias.html" class="game-type-link">Explore Platformers</a>
+                    <p class="game-type-desc">Master movement and exploration in games like Super Mario Odyssey, Hollow Knight, Metroid Dread, Cuphead, Celeste, Ori series, Donkey Kong Country: Tropical Freeze, Super Mario 3D World, Kirby and the Forgotten Land, and Animal Well.</p>
+                </div>
+                <div class="game-type-image">
+                    <img src="platformers.jpg" alt="Platformers & Metroidvanias" class="game-image">
+                </div>
+            </div>
+        </section>
+        
+        <section class="game-type-section">
+            <div class="game-type-container">
+                <div class="game-type-info">
+                    <h2>Roguelikes & Arcade Action</h2>
+                    <a href="Roguelikes & Arcade Action.html" class="game-type-link">Explore Roguelikes</a>
+                    <p class="game-type-desc">High-intensity action with endless replayability in titles like Hades, Star of Providence (Monolith), Enter the Gungeon, ZeroRanger, Balatro, Sonic Mania, Shovel Knight, Tekken 8, Sonic X Shadow Generations, Halo Combat Evolved, and Doom Eternal.</p>
+                </div>
+                <div class="game-type-image">
+                    <img src="arcade action.jpg" alt="Roguelikes & Arcade Action" class="game-image">
+                </div>
+            </div>
+        </section>
+        
+        <section class="game-type-section">
+            <div class="game-type-container">
+                <div class="game-type-info">
+                    <h2>Story-Rich & RPGs</h2>
+                    <a href="Story-Rich & RPGs.html" class="game-type-link">Explore Story-Rich Games</a>
+                    <p class="game-type-desc">Immersive narratives and deep character progression in games like Persona 5, Yakuza: Like a Dragon, Psychonauts 2, Undertale, Deltarune, Stardew Valley, Animal Crossing: New Horizons, Earthbound, Super Mario 2, Mario Galaxy, and Pikmin 4.</p>
+                </div>
+                <div class="game-type-image">
+                    <img src="story-rpgs.webp" alt="Story-Rich & RPGs" class="game-image">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="Game types.html" class="btn-find-game">FIND YOUR GAME</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Retro Réveil - Wake up and play real games</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('background-video');
+            
+            video.play().catch(function(error) {
+                console.log("Autoplay prevented: ", error);
+                
+                if (error.name === "NotAllowedError") {
+                    var playButton = document.createElement('button');
+                    playButton.textContent = "Play Video Background";
+                    playButton.className = "video-play-button";
+                    playButton.onclick = function() {
+                        video.play();
+                        this.remove();
+                    };
+                    document.body.appendChild(playButton);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

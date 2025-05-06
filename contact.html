@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - Retro Réveil</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Contact page styles */
+        .contact-section {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid #ff0055;
+            box-shadow: 0 0 15px rgba(255, 0, 85, 0.5);
+        }
+
+        .contact-section h2 {
+            color: #00ffff;
+            font-family: 'Press Start 2P', cursive;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .contact-option {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 1px solid #00ffff;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .contact-option h3 {
+            color: #ff0055;
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
+
+        .contact-option p {
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9em;
+        }
+
+        .contact-option a {
+            color: #00ffff;
+            text-decoration: none;
+        }
+
+        .contact-option a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            margin-top: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-family: 'Orbitron', sans-serif;
+            color: #00ffff;
+            text-transform: uppercase;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            background-color: #121212;
+            border: 1px solid #00ffff;
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #ff0055;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-family: 'Press Start 2P', cursive;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #00ffff;
+            color: #000;
+            box-shadow: 0 0 8px #00ffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="video2.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    
+    <header>
+        <div class="logo-container">
+            <div class="logo-image">
+                <img src="logo-baby.png" alt="Retro Réveil Logo" class="site-logo-img">
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <a href="Game types.html">GAME TYPES</a>
+            <a href="About Us.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        
+        <div class="find-games-button">
+            <a href="Game types.html" class="btn-find-games">FIND YOUR GAMES</a>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-section">
+            <div class="tagline">
+                <h2>Get in touch</h2>
+            </div>
+        </section>
+        
+        <section class="contact-section">
+            <h2>CONTACT US</h2>
+            
+            <div class="contact-option">
+                <h3>Email</h3>
+                <p><a href="mailto:contact@retroreveil.com">contact@retroreveil.com</a></p>
+                <p>Questions about games or anything else? Drop us a line.</p>
+            </div>
+            
+            <div class="contact-option">
+                <h3>Social</h3>
+                <p><a href="https://twitter.com/retroreveil" target="_blank">Twitter</a></p>
+                <p>Follow us for game recommendations and updates.</p>
+            </div>
+            
+            <div class="contact-form">
+                <h2>MESSAGE US</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="general">General Question</option>
+                            <option value="recommendation">Game Recommendation</option>
+                            <option value="feedback">Website Feedback</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">SEND</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="Game types.html" class="btn-find-game">FIND YOUR GAME</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Retro Réveil - Wake up and play real games</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('background-video');
+            
+            video.play().catch(function(error) {
+                console.log("Autoplay prevented: ", error);
+                
+                if (error.name === "NotAllowedError") {
+                    var playButton = document.createElement('button');
+                    playButton.textContent = "Play Video Background";
+                    playButton.className = "video-play-button";
+                    playButton.onclick = function() {
+                        video.play();
+                        this.remove();
+                    };
+                    document.body.appendChild(playButton);
+                }
+            });
+
+            // Form submission handling
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                alert('Thanks for your message! We\'ll get back to you soon.');
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>

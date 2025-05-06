@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Roguelikes & Arcade Action - Retro Réveil</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Page-specific styles */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .game-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .game-image-container {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .game-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .game-info {
+            padding: 1rem;
+        }
+        
+        .game-info h3 {
+            color: #0ff;
+            margin-top: 0;
+        }
+        
+        .game-info p {
+            color: #fff;
+            font-size: 0.9rem;
+        }
+        
+        .game-media {
+            margin-top: 2rem;
+        }
+        
+        .game-media h3 {
+            color: #0ff;
+            border-bottom: 2px solid #0ff;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .media-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        .media-item {
+            flex: 0 0 300px;
+            height: 180px;
+        }
+        
+        .media-item img, .media-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="gametypes.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    
+    <header>
+        <div class="logo-container">
+            <div class="logo-image">
+                <a href="index.html"><img src="logo-baby.png" alt="Retro Réveil Logo" class="site-logo-img"></a>
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <a href="Game types.html">GAME TYPES</a>
+            <a href="About Us.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        
+        <div class="find-games-button">
+            <a href="Game types.html" class="btn-find-games">FIND YOUR GAMES</a>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-section">
+            <div class="tagline">
+                <h2>Roguelikes & Arcade Action</h2>
+                <p>High-intensity action with endless replayability</p>
+            </div>
+        </section>
+        
+        <section class="category-description">
+            <p>Test your skills in games where each run is different. Roguelikes offer procedurally generated challenges that keep you coming back for more, while arcade action titles deliver fast-paced thrills with responsive controls and satisfying gameplay loops.</p>
+        </section>
+        
+        <section class="games-grid">
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="hades.jpg" alt="Hades" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Hades</h3>
+                    <p>Battle your way out of the Underworld in this award-winning roguelike. As Zagreus, son of Hades, you'll wield powerful weapons and godly boons in your quest to escape the realm of the dead, with each failed attempt revealing more of the rich story.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="star-of-providence.jpg" alt="Star of Providence (Monolith)" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Star of Providence (Monolith)</h3>
+                    <p>A bullet-hell roguelike with tight controls and mesmerizing visuals. Navigate through procedurally generated environments, collect power-ups, and defeat challenging bosses in this modern take on arcade shooters.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="enter-the-gungeon.jpg" alt="Enter the Gungeon" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Enter the Gungeon</h3>
+                    <p>Dodge roll through this bullet-hell dungeon crawler as you search for the legendary gun that can kill the past. With hundreds of unique weapons and items to discover, every run through the Gungeon offers new challenges and possibilities.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="zeroranger.jpg" alt="ZeroRanger" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>ZeroRanger</h3>
+                    <p>A vertical scrolling shooter with a surprising amount of depth and philosophical themes. Pilot your ship through increasingly challenging stages, evolve your capabilities, and experience a journey that transcends the genre's conventions.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="balatro.jpg" alt="Balatro" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Balatro</h3>
+                    <p>A roguelike deckbuilder with a poker twist. Create powerful card combinations, earn chips, and push your luck in this addictive game where every run presents new strategic possibilities through randomized cards and jokers.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="sonic-mania.jpg" alt="Sonic Mania" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Sonic Mania</h3>
+                    <p>A celebration of classic Sonic with modern polish. Speed through remixed zones from Sonic's past alongside brand new levels, with pixel-perfect controls and fluid animation that captures the essence of the blue blur's greatest adventures.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="sonic-shadow-generations.jpg" alt="Sonic X Shadow Generations" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Sonic X Shadow Generations</h3>
+                    <p>Experience the best of both worlds with Sonic and Shadow in this collection that combines classic 2D and modern 3D gameplay. Race through iconic stages from Sonic's history and explore Shadow's own unique campaign.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="tekken-8.jpg" alt="Tekken 8" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Tekken 8</h3>
+                    <p>The latest entry in the legendary fighting game series brings the battle to next-generation hardware. With an aggressive new Heat System, stunning visuals, and the continuation of the Mishima saga, Tekken 8 elevates 3D fighting to new heights.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="doom-eternal.jpg" alt="Doom Eternal" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Doom Eternal</h3>
+                    <p>Rip and tear through hordes of demons in this frenetic first-person shooter. As the Doom Slayer, you'll use an arsenal of powerful weapons and execute brutal glory kills in a desperate campaign to save humanity from hell's invasion.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="halo-combat-evolved.jpg" alt="Halo Combat Evolved" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Halo Combat Evolved</h3>
+                    <p>The groundbreaking first-person shooter that defined a generation. Step into the armor of Master Chief and battle the alien Covenant on the mysterious Halo ring world in this sci-fi classic with timeless gameplay and an iconic soundtrack.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="game-media">
+            <h3>Videos & Images</h3>
+            <div class="media-container">
+                <div class="media-item">
+                    <img src="hades-gameplay.jpg" alt="Hades Gameplay">
+                </div>
+                <div class="media-item">
+                    <img src="sonic-mania-screenshot.jpg" alt="Sonic Mania Screenshot">
+                </div>
+                <div class="media-item">
+                    <img src="enter-gungeon-gameplay.jpg" alt="Enter the Gungeon Gameplay">
+                </div>
+                <div class="media-item">
+                    <img src="doom-eternal-screenshot.jpg" alt="Doom Eternal Screenshot">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="Game types.html" class="btn-find-game">BACK TO GAME TYPES</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Retro Réveil - Wake up and play real games</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('background-video');
+            
+            video.play().catch(function(error) {
+                console.log("Autoplay prevented: ", error);
+                
+                if (error.name === "NotAllowedError") {
+                    var playButton = document.createElement('button');
+                    playButton.textContent = "Play Video Background";
+                    playButton.className = "video-play-button";
+                    playButton.onclick = function() {
+                        video.play();
+                        this.remove();
+                    };
+                    document.body.appendChild(playButton);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

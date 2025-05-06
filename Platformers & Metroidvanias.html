@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Platformers & Metroidvanias - Retro Réveil</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Page-specific styles */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .game-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .game-image-container {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .game-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .game-info {
+            padding: 1rem;
+        }
+        
+        .game-info h3 {
+            color: #0ff;
+            margin-top: 0;
+        }
+        
+        .game-info p {
+            color: #fff;
+            font-size: 0.9rem;
+        }
+        
+        .game-media {
+            margin-top: 2rem;
+        }
+        
+        .game-media h3 {
+            color: #0ff;
+            border-bottom: 2px solid #0ff;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .media-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        .media-item {
+            flex: 0 0 300px;
+            height: 180px;
+        }
+        
+        .media-item img, .media-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="gametypes.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    
+    <header>
+        <div class="logo-container">
+            <div class="logo-image">
+                <a href="index.html"><img src="logo-baby.png" alt="Retro Réveil Logo" class="site-logo-img"></a>
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <a href="Game types.html">GAME TYPES</a>
+            <a href="About Us.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        
+        <div class="find-games-button">
+            <a href="Game types.html" class="btn-find-games">FIND YOUR GAMES</a>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-section">
+            <div class="tagline">
+                <h2>Platformers & Metroidvanias</h2>
+                <p>Master movement and exploration in beautifully crafted worlds</p>
+            </div>
+        </section>
+        
+        <section class="category-description">
+            <p>Jump, climb, and explore through intricately designed environments. Platformers test your reflexes and timing, while Metroidvanias reward exploration with new abilities that unlock previously inaccessible areas. These games combine precision movement with the joy of discovery.</p>
+        </section>
+        
+        <section class="games-grid">
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="super-mario-odyssey.jpg" alt="Super Mario Odyssey" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Super Mario Odyssey</h3>
+                    <p>Travel across vast kingdoms with Mario and his new ally Cappy. Capture enemies to use their unique abilities in this joyful 3D platforming adventure that celebrates the history of the Mario franchise.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="hollow-knight.jpg" alt="Hollow Knight" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Hollow Knight</h3>
+                    <p>Explore the vast, interconnected world of Hallownest in this beautiful hand-drawn Metroidvania. Encounter bizarre bugs and beasts, discover ancient secrets, and unravel mysteries in a kingdom of insects and heroes.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="metroid-dread.jpg" alt="Metroid Dread" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Metroid Dread</h3>
+                    <p>The return of 2D Metroid introduces a new planet to explore and terrifying E.M.M.I. robots to escape from. Samus Aran's latest adventure combines exploration, combat, and stealth in this tense sci-fi action game.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="cuphead.jpg" alt="Cuphead: Don't Deal with the Devil" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Cuphead: Don't Deal with the Devil</h3>
+                    <p>Inspired by 1930s cartoons, this run-and-gun platformer features meticulously hand-drawn animation and a jazz soundtrack. Help Cuphead and Mugman repay their debt to the devil in this challenging game.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="celeste.jpg" alt="Celeste" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Celeste</h3>
+                    <p>Help Madeline climb Celeste Mountain in this precision platformer with a moving story about overcoming personal demons. With tight controls and a forgiving checkpoint system, Celeste is both challenging and accessible.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="ori-blind-forest.jpg" alt="Ori and the Blind Forest" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Ori and the Blind Forest</h3>
+                    <p>A visually stunning Metroidvania with fluid movement mechanics. Guide Ori through the dying forest of Nibel in this emotional tale of hope and sacrifice, featuring beautiful hand-painted art and orchestral score.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="ori-will-wisps.jpg" alt="Ori and the Will of the Wisps" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Ori and the Will of the Wisps</h3>
+                    <p>The sequel to Blind Forest expands on the original with new combat options and movement abilities. Explore the new land of Niwen in this breathtaking adventure with improved gameplay and emotional storytelling.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="donkey-kong-tropical-freeze.jpg" alt="Donkey Kong Country: Tropical Freeze" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Donkey Kong Country: Tropical Freeze</h3>
+                    <p>Join Donkey Kong and his friends as they reclaim their island from invading arctic forces. This challenging 2D platformer features beautiful levels, memorable boss fights, and an excellent David Wise soundtrack.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="super-mario-3d-world.jpg" alt="Super Mario 3D World + Bowser's Fury" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Super Mario 3D World + Bowser's Fury</h3>
+                    <p>Experience two Mario adventures in one package. The main game offers classic 3D platforming with friends, while Bowser's Fury introduces an open-world Mario adventure with a rampaging, kaiju-sized Bowser.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="shovel-knight.jpg" alt="Shovel Knight" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Shovel Knight</h3>
+                    <p>A love letter to 8-bit platformers with modern design sensibilities. Wield your trusty Shovel Blade through this retro-inspired adventure featuring tight controls, memorable characters, and chiptune music.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="shovel-knight-specter.jpg" alt="Shovel Knight: Specter of Torment" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Shovel Knight: Specter of Torment</h3>
+                    <p>Play as the scythe-wielding Specter Knight in this prequel to Shovel Knight. With unique movement abilities centered around wall running and dashing, this campaign offers a fresh take on the Shovel Knight formula.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="kirby-forgotten-land.jpg" alt="Kirby and the Forgotten Land" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Kirby and the Forgotten Land</h3>
+                    <p>Kirby's first fully 3D adventure takes place in a mysterious world with abandoned civilizations. With the new "Mouthful Mode" ability, Kirby can inhale large objects to take on their properties in creative ways.</p>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-image-container">
+                    <img src="animal-well.jpg" alt="Animal Well" class="game-image">
+                </div>
+                <div class="game-info">
+                    <h3>Animal Well</h3>
+                    <p>A mysterious puzzle-platformer filled with secrets. Explore an interconnected labyrinth filled with strange creatures and hidden mechanics in this meticulously designed pixel art adventure.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="game-media">
+            <h3>Videos & Images</h3>
+            <div class="media-container">
+                <div class="media-item">
+                    <img src="hollow-knight-gameplay.jpg" alt="Hollow Knight Gameplay">
+                </div>
+                <div class="media-item">
+                    <img src="ori-screenshot.jpg" alt="Ori and the Will of the Wisps Screenshot">
+                </div>
+                <div class="media-item">
+                    <img src="mario-odyssey-screenshot.jpg" alt="Super Mario Odyssey Screenshot">
+                </div>
+                <div class="media-item">
+                    <img src="celeste-gameplay.jpg" alt="Celeste Gameplay">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="Game types.html" class="btn-find-game">BACK TO GAME TYPES</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Retro Réveil - Wake up and play real games</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('background-video');
+            
+            video.play().catch(function(error) {
+                console.log("Autoplay prevented: ", error);
+                
+                if (error.name === "NotAllowedError") {
+                    var playButton = document.createElement('button');
+                    playButton.textContent = "Play Video Background";
+                    playButton.className = "video-play-button";
+                    playButton.onclick = function() {
+                        video.play();
+                        this.remove();
+                    };
+                    document.body.appendChild(playButton);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
