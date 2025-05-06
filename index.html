@@ -1,1 +1,117 @@
-# misunderstood.github.io
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retro Réveil</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="video2.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    
+    <header>
+        <div class="logo-container">
+            <div class="logo-image">
+                <img src="logo-baby.png" alt="Retro Réveil Logo" class="site-logo-img">
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <a href="Game types.html">GAME TYPES</a>
+            <a href="About Us.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        
+        <div class="find-games-button">
+            <a href="Game types.html" class="btn-find-games">FIND YOUR GAMES</a>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-section">
+            <div class="tagline">
+                <h2> Wake up and play <em>real games</em> </h2>
+            </div>
+        </section>
+        
+        <section class="content-box center-aligned">
+            <h3> It can be difficult to fit in a world where microtransaction games are popularised and mainstream. Instead of "pretending to have fun" or "paying to win" you have the choice of playing games that actually have genuine substance, quality and ideas. </h3>
+        </section>
+        
+        <section class="feature-section">
+            <div class="feature-grid">
+                <div class="feature-box">
+                    <h2>Does this look familiar?</h2>
+                </div>
+                
+                <div class="feature-image">
+                    <img src="trash.png" alt="Trash Icon" class="feature-icon">
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-section full-width">
+            <h2> Escape the modern-day matrix of gaming</h2>
+            <p>Those games not only manipulate people into paying for microtransactions, but copy and pasted the same ideas from other games</p>
+        </section>
+        
+        <section class="games-recommend-section">
+            <div class="recommend-container">
+                <div class="recommend-text">
+                    <h2> We recommend the best games <em>to you</em> </h2>
+                </div>
+                <div class="recommend-image">
+                    <img src="a4.png" alt="Game Recommendation" class="recommend-img">
+                </div>
+            </div>
+        </section>
+        
+        <section class="red-box-section">
+            <div class="red-box">
+                <h2> Discover authentic gaming experiences that feel like stepping into works of art </h2>
+            </div>
+        </section>
+        
+        <section class="mario-image-section">
+            <img src="mario.jpg" alt="Mario Character" class="mario-full-img">
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="Game types.html" class="btn-find-game">FIND YOUR GAME</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Retro Réveil - Wake up and play real games</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('background-video');
+            
+            video.play().catch(function(error) {
+                console.log("Autoplay prevented: ", error);
+                
+                if (error.name === "NotAllowedError") {
+                    var playButton = document.createElement('button');
+                    playButton.textContent = "Play Video Background";
+                    playButton.className = "video-play-button";
+                    playButton.onclick = function() {
+                        video.play();
+                        this.remove();
+                    };
+                    document.body.appendChild(playButton);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
