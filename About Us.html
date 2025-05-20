@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us - Retro Réveil</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* About Us specific styles */
+        .about-section {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid #ff0055;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 800px;
+            box-shadow: 0 0 15px rgba(255, 0, 85, 0.5);
+        }
+
+        .about-section h2 {
+            color: #00ffff;
+            font-family: 'Press Start 2P', cursive;
+            margin-bottom: 25px;
+        }
+
+        .about-section p {
+            color: #ffffff;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .about-values {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .value-item {
+            width: 30%;
+            margin-bottom: 25px;
+        }
+
+        .value-item h3 {
+            color: #ff0055;
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 8px;
+        }
+
+        .value-item p {
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .value-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="video2.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    
+    <header>
+        <div class="logo-container">
+            <div class="logo-image">
+                <img src="logo-baby.png" alt="Retro Réveil Logo" class="site-logo-img">
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <a href="Game types.html">GAME TYPES</a>
+            <a href="About Us.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        
+        <div class="find-games-button">
+            <a href="Game types.html" class="btn-find-games">FIND YOUR GAMES</a>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-section">
+            <div class="tagline">
+                <h2>About Retro Réveil</h2>
+            </div>
+        </section>
+        
+        <section class="about-section">
+            <h2>Retro Réveil</h2>
+            <p>Started in 2020, Retro Réveil is all about finding games that focus on quality gameplay rather than just trying to get your money. We help players find both old classics and new titles that actually care about being good games.</p>
+            
+            <p>We don't just recommend whatever's popular - we look for games that are worth your time and money. Games that don't trick you into endless purchases or waste your time with repetitive tasks.</p>
+            
+            <div class="about-values">
+                <div class="value-item">
+                    <h3>COMPLETE GAMES</h3>
+                    <p>We like games that give you everything when you buy them, not games that make you keep paying more.</p>
+                </div>
+                
+                <div class="value-item">
+                    <h3>PLAYER RESPECT</h3>
+                    <p>We recommend games that respect your time and don't try to manipulate you.</p>
+                </div>
+                
+                <div class="value-item">
+                    <h3>CREATIVE DESIGN</h3>
+                    <p>We look for games with new ideas, not just copied formulas.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="Game types.html" class="btn-find-game">FIND YOUR GAME</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Retro Réveil - Wake up and play real games</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('background-video');
+            
+            video.play().catch(function(error) {
+                console.log("Autoplay prevented: ", error);
+                
+                if (error.name === "NotAllowedError") {
+                    var playButton = document.createElement('button');
+                    playButton.textContent = "Play Video Background";
+                    playButton.className = "video-play-button";
+                    playButton.onclick = function() {
+                        video.play();
+                        this.remove();
+                    };
+                    document.body.appendChild(playButton);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
