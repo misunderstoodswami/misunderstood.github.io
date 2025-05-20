@@ -18,11 +18,12 @@
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
             overflow: hidden;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease; // Smooth transition property for hover animation
         }
         
+        // Hover effect for game cards - creates an elevation effect when user hovers
         .game-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px); // Moves card up by 5px when hovered
         }
         
         .game-image-container {
@@ -49,6 +50,36 @@
             color: #fff;
             font-size: 0.9rem;
         }
+        
+        .game-media {
+            margin-top: 2rem;
+        }
+        
+        .game-media h3 {
+            color: #0ff;
+            border-bottom: 2px solid #0ff;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .media-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        .media-item {
+            flex: 0 0 300px;
+            height: 180px;
+        }
+        
+        .media-item img, .media-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -67,12 +98,14 @@
         </div>
         
         <nav class="main-nav">
+            <!-- Navigation links likely have hover effects in main.css -->
             <a href="Game types.html">GAME TYPES</a>
             <a href="About Us.html">ABOUT US</a>
             <a href="contact.html">CONTACT</a>
         </nav>
         
         <div class="find-games-button">
+            <!-- Find games button likely has hover effect defined in main.css -->
             <a href="Game types.html" class="btn-find-games">FIND YOUR GAMES</a>
         </div>
     </header>
@@ -90,6 +123,7 @@
         </section>
         
         <section class="games-grid">
+            <!-- Game cards with hover effects defined in CSS above -->
             <div class="game-card">
                 <div class="game-image-container">
                     <img src="hades.jpg" alt="Hades" class="game-image">
@@ -102,7 +136,7 @@
             
             <div class="game-card">
                 <div class="game-image-container">
-                    <img src="bestgame.jpg" alt="Star of Providence (Monolith)" class="game-image">
+                    <img src="star-of-providence.jpg" alt="Star of Providence (Monolith)" class="game-image">
                 </div>
                 <div class="game-info">
                     <h3>Star of Providence (Monolith)</h3>
@@ -112,7 +146,7 @@
             
             <div class="game-card">
                 <div class="game-image-container">
-                    <img src="gungeon.jpg" alt="Enter the Gungeon" class="game-image">
+                    <img src="enter-the-gungeon.jpg" alt="Enter the Gungeon" class="game-image">
                 </div>
                 <div class="game-info">
                     <h3>Enter the Gungeon</h3>
@@ -142,7 +176,7 @@
             
             <div class="game-card">
                 <div class="game-image-container">
-                    <img src="mania.jpg" alt="Sonic Mania" class="game-image">
+                    <img src="sonic-mania.jpg" alt="Sonic Mania" class="game-image">
                 </div>
                 <div class="game-info">
                     <h3>Sonic Mania</h3>
@@ -152,7 +186,7 @@
             
             <div class="game-card">
                 <div class="game-image-container">
-                    <img src="shadow.jpg" alt="Sonic X Shadow Generations" class="game-image">
+                    <img src="sonic-shadow-generations.jpg" alt="Sonic X Shadow Generations" class="game-image">
                 </div>
                 <div class="game-info">
                     <h3>Sonic X Shadow Generations</h3>
@@ -162,7 +196,7 @@
             
             <div class="game-card">
                 <div class="game-image-container">
-                    <img src="tekken.jpg" alt="Tekken 8" class="game-image">
+                    <img src="tekken-8.jpg" alt="Tekken 8" class="game-image">
                 </div>
                 <div class="game-info">
                     <h3>Tekken 8</h3>
@@ -172,7 +206,7 @@
             
             <div class="game-card">
                 <div class="game-image-container">
-                    <img src="doom.jpg" alt="Doom Eternal" class="game-image">
+                    <img src="doom-eternal.jpg" alt="Doom Eternal" class="game-image">
                 </div>
                 <div class="game-info">
                     <h3>Doom Eternal</h3>
@@ -182,11 +216,29 @@
             
             <div class="game-card">
                 <div class="game-image-container">
-                    <img src="halo.jpg" alt="Halo Combat Evolved" class="game-image">
+                    <img src="halo-combat-evolved.jpg" alt="Halo Combat Evolved" class="game-image">
                 </div>
                 <div class="game-info">
                     <h3>Halo Combat Evolved</h3>
                     <p>The groundbreaking first-person shooter that defined a generation. Step into the armor of Master Chief and battle the alien Covenant on the mysterious Halo ring world in this sci-fi classic with timeless gameplay and an iconic soundtrack.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="game-media">
+            <h3>Videos & Images</h3>
+            <div class="media-container">
+                <div class="media-item">
+                    <img src="hades-gameplay.jpg" alt="Hades Gameplay">
+                </div>
+                <div class="media-item">
+                    <img src="sonic-mania-screenshot.jpg" alt="Sonic Mania Screenshot">
+                </div>
+                <div class="media-item">
+                    <img src="enter-gungeon-gameplay.jpg" alt="Enter the Gungeon Gameplay">
+                </div>
+                <div class="media-item">
+                    <img src="doom-eternal-screenshot.jpg" alt="Doom Eternal Screenshot">
                 </div>
             </div>
         </section>
@@ -195,6 +247,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-links">
+                <!-- Back to game types button likely has hover effect defined in main.css -->
                 <a href="Game types.html" class="btn-find-game">BACK TO GAME TYPES</a>
             </div>
             <div class="copyright">
@@ -213,7 +266,7 @@
                 if (error.name === "NotAllowedError") {
                     var playButton = document.createElement('button');
                     playButton.textContent = "Play Video Background";
-                    playButton.className = "video-play-button";
+                    playButton.className = "video-play-button"; // This button likely has hover effects in main.css
                     playButton.onclick = function() {
                         video.play();
                         this.remove();
