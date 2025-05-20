@@ -17,11 +17,12 @@
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
             overflow: hidden;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease; // Animation transition for hover effect
         }
         
+        // Hover effect for game cards - lifts the card slightly up when hovered
         .game-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px); // Moves the card 5px upward on hover
         }
         
         .game-image-container {
@@ -48,6 +49,36 @@
             color: #fff;
             font-size: 0.9rem;
         }
+        
+        .game-media {
+            margin-top: 2rem;
+        }
+        
+        .game-media h3 {
+            color: #0ff;
+            border-bottom: 2px solid #0ff;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .media-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        .media-item {
+            flex: 0 0 300px;
+            height: 180px;
+        }
+        
+        .media-item img, .media-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -66,12 +97,14 @@
         </div>
         
         <nav class="main-nav">
+            <!-- Navigation links likely have hover effects defined in main.css -->
             <a href="Game types.html">GAME TYPES</a>
             <a href="About Us.html">ABOUT US</a>
             <a href="contact.html">CONTACT</a>
         </nav>
         
         <div class="find-games-button">
+            <!-- Find games button likely has hover effect defined in main.css -->
             <a href="Game types.html" class="btn-find-games">FIND YOUR GAMES</a>
         </div>
     </header>
@@ -89,9 +122,10 @@
         </section>
         
         <section class="games-grid">
+            <!-- Game cards with hover effects defined in CSS above -->
             <div class="game-card">
                 <div class="game-image-container">
-                    <img src="persona.jpg" alt="Persona 5" class="game-image">
+                    <img src="persona-5.jpg" alt="Persona 5" class="game-image">
                 </div>
                 <div class="game-info">
                     <h3>Persona 5</h3>
@@ -101,7 +135,7 @@
             
             <div class="game-card">
                 <div class="game-image-container">
-                    <img src="yakuza.jpg" alt="Yakuza: Like a Dragon" class="game-image">
+                    <img src="yakuza-like-dragon.jpg" alt="Yakuza: Like a Dragon" class="game-image">
                 </div>
                 <div class="game-info">
                     <h3>Yakuza: Like a Dragon</h3>
@@ -111,7 +145,7 @@
             
             <div class="game-card">
                 <div class="game-image-container">
-                    <img src="nauts.jpg" alt="Psychonauts 2" class="game-image">
+                    <img src="psychonauts-2.jpg" alt="Psychonauts 2" class="game-image">
                 </div>
                 <div class="game-info">
                     <h3>Psychonauts 2</h3>
@@ -131,7 +165,7 @@
             
             <div class="game-card">
                 <div class="game-image-container">
-                    <img src="delta.png" alt="Deltarune" class="game-image">
+                    <img src="deltarune.jpg" alt="Deltarune" class="game-image">
                 </div>
                 <div class="game-info">
                     <h3>Deltarune</h3>
@@ -141,7 +175,7 @@
             
             <div class="game-card">
                 <div class="game-image-container">
-                    <img src="stardew.jpg" alt="Stardew Valley" class="game-image">
+                    <img src="stardew-valley.jpg" alt="Stardew Valley" class="game-image">
                 </div>
                 <div class="game-info">
                     <h3>Stardew Valley</h3>
@@ -151,7 +185,7 @@
             
             <div class="game-card">
                 <div class="game-image-container">
-                    <img src="animal.jpg" alt="Animal Crossing: New Horizons" class="game-image">
+                    <img src="animal-crossing.jpg" alt="Animal Crossing: New Horizons" class="game-image">
                 </div>
                 <div class="game-info">
                     <h3>Animal Crossing: New Horizons</h3>
@@ -171,7 +205,7 @@
             
             <div class="game-card">
                 <div class="game-image-container">
-                    <img src="mario2.png" alt="Super Mario 2" class="game-image">
+                    <img src="super-mario-2.jpg" alt="Super Mario 2" class="game-image">
                 </div>
                 <div class="game-info">
                     <h3>Super Mario 2</h3>
@@ -181,7 +215,7 @@
             
             <div class="game-card">
                 <div class="game-image-container">
-                    <img src="mariogalaxy.jpg" alt="Mario Galaxy" class="game-image">
+                    <img src="mario-galaxy.jpg" alt="Mario Galaxy" class="game-image">
                 </div>
                 <div class="game-info">
                     <h3>Mario Galaxy</h3>
@@ -191,11 +225,29 @@
             
             <div class="game-card">
                 <div class="game-image-container">
-                    <img src="pikmin.jpg" alt="Pikmin 4" class="game-image">
+                    <img src="pikmin-4.jpg" alt="Pikmin 4" class="game-image">
                 </div>
                 <div class="game-info">
                     <h3>Pikmin 4</h3>
                     <p>Command adorable plant-like creatures to overcome obstacles and rescue stranded castaways on a mysterious planet. With the help of your canine companion Oatchi, discover the planet's secrets in this charming strategy adventure.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="game-media">
+            <h3>Videos & Images</h3>
+            <div class="media-container">
+                <div class="media-item">
+                    <img src="persona-5-gameplay.jpg" alt="Persona 5 Gameplay">
+                </div>
+                <div class="media-item">
+                    <img src="undertale-screenshot.jpg" alt="Undertale Screenshot">
+                </div>
+                <div class="media-item">
+                    <img src="stardew-valley-screenshot.jpg" alt="Stardew Valley Screenshot">
+                </div>
+                <div class="media-item">
+                    <img src="psychonauts-2-gameplay.jpg" alt="Psychonauts 2 Gameplay">
                 </div>
             </div>
         </section>
@@ -204,6 +256,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-links">
+                <!-- Footer button likely has hover effect defined in main.css -->
                 <a href="Game types.html" class="btn-find-game">BACK TO GAME TYPES</a>
             </div>
             <div class="copyright">
@@ -222,7 +275,7 @@
                 if (error.name === "NotAllowedError") {
                     var playButton = document.createElement('button');
                     playButton.textContent = "Play Video Background";
-                    playButton.className = "video-play-button";
+                    playButton.className = "video-play-button"; // This button likely has hover effects in main.css
                     playButton.onclick = function() {
                         video.play();
                         this.remove();
@@ -233,4 +286,4 @@
         });
     </script>
 </body>
-</html>
+</ht
