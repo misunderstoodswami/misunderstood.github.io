@@ -5,6 +5,48 @@
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Game Types specific styles */
+        /* Hover effect for game type links - changes color and adds glow effect on hover */
+        .game-type-link:hover {
+            color: #00ffff;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 8px #00ffff;
+        }
+        
+        /* Hover effect for game type container - adds subtle lift and glow effect on hover */
+        .game-type-container:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+        
+        /* Hover effect for game images - adds subtle zoom effect on hover */
+        .game-image:hover {
+            transform: scale(1.05);
+            transition: transform 0.5s ease;
+        }
+        
+        /* Hover effect for the main navigation links - changes color and adds glow effect on hover */
+        .main-nav a:hover {
+            color: #00ffff;
+            text-shadow: 0 0 8px #00ffff;
+        }
+
+        /* Hover effect for the Find Games button - changes background color and adds glow effect on hover */
+        .btn-find-games:hover {
+            background-color: #00ffff;
+            color: #000;
+            box-shadow: 0 0 8px #00ffff;
+        }
+
+        /* Hover effect for footer links - changes color and adds glow effect on hover */
+        .footer-links a:hover {
+            background-color: #00ffff;
+            color: #000;
+            box-shadow: 0 0 8px #00ffff;
+        }
+    </style>
 </head>
 <body>
     <div class="video-background">
@@ -39,6 +81,7 @@
             </div>
         </section>
         
+        <!-- Updated Game Type Sections with proper links -->
         <section class="game-type-section">
             <div class="game-type-container">
                 <div class="game-type-info">
@@ -114,6 +157,15 @@
                     var playButton = document.createElement('button');
                     playButton.textContent = "Play Video Background";
                     playButton.className = "video-play-button";
+                    /* Hover effect for video play button - changes opacity and adds glow on hover */
+                    document.head.insertAdjacentHTML('beforeend', `
+                        <style>
+                            .video-play-button:hover {
+                                opacity: 0.9;
+                                box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+                            }
+                        </style>
+                    `);
                     playButton.onclick = function() {
                         video.play();
                         this.remove();
